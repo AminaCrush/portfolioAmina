@@ -1,0 +1,72 @@
+/* Основные стили для Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffc0cb; /* Темный фон */
+  padding: 1rem 2rem; /* Отступы */
+  color: rgb(59, 10, 10); /* Цвет текста */
+  flex-wrap: wrap; /* Позволяет элементам обтекать */
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.8rem; /* Размер заголовка */
+  font-weight: bold; /* Жирный шрифт */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem; /* Расстояние между ссылками */
+  flex-wrap: wrap; /* Позволяет ссылкам обтекать */
+}
+
+.nav-links a {
+  color: rgb(0, 0, 0); /* Цвет ссылок */
+  text-decoration: none; /* Убираем подчеркивание */
+  font-size: 1rem; /* Размер шрифта */
+  transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.nav-links a:hover {
+  color: #766e67; /* Цвет при наведении */
+}
+
+/* Адаптивность для экранов с шириной более 600px (планшеты и маленькие десктопы) */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column; /* Структура вертикальная */
+    align-items: flex-start; /* Выравнивание по левому краю */
+    padding: 1rem; /* Меньше отступов для мобильных */
+  }
+
+  .navbar h1 {
+    font-size: 1.6rem; /* Уменьшаем размер заголовка */
+    margin-bottom: 1rem; /* Отступ снизу */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Ссылки будут вертикальными */
+    gap: 1rem; /* Меньше расстояния между ссылками */
+    width: 100%; /* Ссылки растягиваются по ширине */
+  }
+
+  .nav-links a {
+    font-size: 1.2rem; /* Увеличиваем шрифт для лучшей видимости */
+  }
+}
+
+/* Адаптивность для экранов с шириной более 1024px (десктопы) */
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 1rem 3rem; /* Больше отступов для десктопов */
+  }
+
+  .nav-links {
+    gap: 3rem; /* Увеличиваем расстояние между ссылками */
+  }
+
+  .nav-links a {
+    font-size: 1.1rem; /* Немного увеличиваем шрифт */
+  }
+}

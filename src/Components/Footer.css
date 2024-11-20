@@ -1,0 +1,68 @@
+/* Основные стили для Footer */
+.footer {
+  background-color: #ffc0cb; /* Светлый розовый фон */
+  padding: 2rem 2rem;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border-top: 2px solid #d6d6d6; /* Легкая граница сверху */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+  color: rgb(74, 12, 12); /* Цвет текста */
+  margin-bottom: 1rem; /* Отступ снизу */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Расстояние между ссылками */
+}
+
+.footer-links a {
+  color: rgb(74, 12, 12); /* Цвет ссылок */
+  text-decoration: none; /* Убираем подчеркивание */
+  font-size: 1rem;
+  transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.footer-links a:hover {
+  color: #566460; /* Цвет при наведении */
+}
+
+/* Адаптивность для экранов шириной до 600px (мобильные устройства) */
+@media (max-width: 600px) {
+  .footer {
+    padding: 1.5rem 1rem; /* Меньше отступов для мобильных устройств */
+  }
+
+  .footer p {
+    font-size: 0.9rem; /* Уменьшаем размер текста */
+    margin-bottom: 0.5rem; /* Меньше отступа снизу */
+  }
+
+  .footer-links {
+    flex-direction: column; /* Ссылки вертикально */
+    gap: 1rem; /* Меньше расстояние между ссылками */
+  }
+
+  .footer-links a {
+    font-size: 1.1rem; /* Увеличиваем шрифт для лучшей видимости */
+  }
+}
+
+/* Адаптивность для экранов с шириной более 1024px (десктопы) */
+@media (min-width: 1024px) {
+  .footer {
+    padding: 2rem 4rem; /* Больше отступов для десктопов */
+  }
+
+  .footer-links {
+    gap: 3rem; /* Увеличиваем расстояние между ссылками */
+  }
+
+  .footer-links a {
+    font-size: 1.1rem; /* Увеличиваем шрифт */
+  }
+}
